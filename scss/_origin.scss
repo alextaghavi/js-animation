@@ -1,0 +1,31 @@
+@import 'functions';
+@import 'variables';
+@import 'mixins';
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Lobster&display=swap');
+
+* {
+    -webkit-box-sizing : border-box;
+    -moz-box-sizing    : border-box;
+    box-sizing         : border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*:focus {
+    outline            : none;
+}
+
+html, body {
+    scroll-behavior    : smooth;
+    font-family        : $Heebo;
+    letter-spacing     : .0625rem;
+    color              : $first-color;
+    font-size: 100%;
+    @include pad_mar(0,0);
+    @include fullSize;
+}
+
+li {
+    list-style         : none;
+}

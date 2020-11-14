@@ -1,0 +1,68 @@
+@import 'origin';
+
+main{
+    font-family: $Heebo;
+
+    .landing{
+        min-height: 100vh;
+        background: url("./hero.jpg");
+        background-size: cover;
+        padding: 0 5rem;
+
+        nav{
+            @include flex(row, space-between, center);
+            min-height: 10vh;
+
+            #logo{
+                font-family: $Lobster;
+                font-weight: lighter;
+                font-size: toRem(32px);
+            }
+
+            .nav-links{
+                @include flex();
+                li{
+                    padding-left: 5rem;
+                    font-size: toRem(19px);
+                }
+            }
+        }
+
+        .big-text{
+            position: absolute;
+            left: 50%;
+            top: 30%;
+            transform: translate(-50%, -30%);
+            font-size: toRem(48px);
+            font-family: $Lobster;
+            color: rgb(61,61,61);
+        }
+    }
+}
+
+.intro{
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include flex(row, center, center);
+
+    .intro-text{
+        color: rgb(233, 233, 233);
+        font-family: $Heebo;
+        font-size: toRem(30px);
+    }
+}
+
+.slider{
+    background: rgb(97, 105, 109);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+}
+
